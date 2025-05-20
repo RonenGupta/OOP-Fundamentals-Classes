@@ -24,7 +24,5 @@ Shortbow = Shortbow("Even Shorter Levin", "Shortbow", 20, "Bludgeoning", 80)
 Shortbow.get_stats()
 
 
+print(createweapon())
 
-createweapon()
-
-print(WeaponsDictionary)

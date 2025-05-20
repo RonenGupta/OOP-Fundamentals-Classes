@@ -80,21 +80,27 @@ class Shortbow(Longbow):
     pass
 
 def createweapon():
-        namechoice = input("Welcome to weapon creation! Enter the name first: ")
-        categorychoice = input("Great! What is your weapon type? (Sword or Bow): ")
-        damagechoice = {random.randint(1, 1000)}
-        print(f"Your weapons damage: {damagechoice}")
-        damagecategorychoice = input(f"Choose your damage category choice: ")
+        while True:
+            namechoice = input("Welcome to weapon creation! Enter the name first or press enter 2 to exit!: ")
+            categorychoice = input("Great! What is your weapon type? (Sword or Bow): ")
+            damagechoice = {random.randint(1, 1000)}
+            print(f"Your weapons damage: {damagechoice}")
+            damagecategorychoice = input(f"Choose your damage category choice: ")
 
-        if categorychoice == "Bow":
-            print(f"Created a bow with name {namechoice}, damage {damagechoice}, category {categorychoice}, and damage category {damagecategorychoice}! Saved to your weapons list!")
-            WeaponsDictionary[namechoice] = (Bow(namechoice, categorychoice, damagechoice, damagecategorychoice))
-    
+            if categorychoice == "Bow":
+                print(f"Created a bow with name {namechoice}, damage {damagechoice}, category {categorychoice}, and damage category {damagecategorychoice}! Saved to your weapons list!")
+                WeaponsDictionary[namechoice] = (Bow(namechoice, categorychoice, damagechoice, damagecategorychoice))
+                print(f"Current Weapon Inventory: {WeaponsDictionary}")
         
-        elif categorychoice == "Sword":
-            print(f"Created a sword with name {namechoice}, damage {damagechoice}, category {categorychoice}, and damage category {damagecategorychoice}! Saved to your weapons list!")
-            WeaponsDictionary[namechoice] = (Sword(namechoice, categorychoice, damagechoice, damagecategorychoice))
+            
+            elif categorychoice == "Sword":
+                print(f"Created a sword with name {namechoice}, damage {damagechoice}, category {categorychoice}, and damage category {damagecategorychoice}! Saved to your weapons list!")
+                WeaponsDictionary[namechoice] = (Sword(namechoice, categorychoice, damagechoice, damagecategorychoice))
+                print(f"Current Weapon Inventory: {WeaponsDictionary}")
 
-        elif categorychoice != "Sword" or "Bow":
-            print("Cannot create this weapon!")
+            elif categorychoice != "Sword" or "Bow":
+                print("Cannot create this weapon!")
+            
+
+            
     
