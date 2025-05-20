@@ -1,8 +1,5 @@
 from Animal import *
 from Weapons import *
-from Weapons import WeaponsDictionary
-
-
 
 Dog = Dog("Dog", "Woof")
 Dog.get_sound()
