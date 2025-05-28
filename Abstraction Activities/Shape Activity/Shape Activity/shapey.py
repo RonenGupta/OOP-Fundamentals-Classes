@@ -31,11 +31,25 @@ class Rectangle(Shape):
 		self.width = width
 		self.height = height
 		self.length = length
+
 	def perimeter(self):
 			return 2 * (self.width + self.height)
+	
 	def area(self):
 		return self.width * self.height
+	
 	def volume(self):
 		return self.width * self.height * self.length
 	
+class Square(Shape):
+	def __init__(self, width):
+		self.width = width
 
+	def perimeter(self):
+		return 4 * self.width
+	
+	def area(self):
+		return self.width * self.width
+	
+	def volume(self):
+		return self.width * self.width * self.width
