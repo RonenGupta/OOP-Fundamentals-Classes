@@ -5,7 +5,7 @@ class Person:
         self.gender = gender
 
     def display_details(self):
-        print(f"Hello, my name is {self.name} and my birth date is {self.dob}, and my gender is {self.gender}")
+        print(f"Hello, my name is {self.name}, my birth date is {self.dob} and my gender is {self.gender}")
 
 class Teacher(Person):
     def __init__(self, name, dob, gender, staffid, subject):
